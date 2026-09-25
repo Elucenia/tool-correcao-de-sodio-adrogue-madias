@@ -1,0 +1,105 @@
+[
+  {
+    "label": "Mulher 60 kg, Na 110, NaCl 3%: +13,0/L; meta 8 → 615 mL",
+    "input": {
+      "na": 110,
+      "peso": 60,
+      "grupo": "0.5",
+      "sol": "ns3",
+      "meta": 8
+    },
+    "expected": {
+      "raw": {
+        "delta": 13,
+        "vol": 0.6154,
+        "tbw": 30
+      },
+      "level": "info",
+      "main": "+13,0",
+      "tol": 0.01
+    },
+    "originalInput": {
+      "na": 110,
+      "peso": 60,
+      "grupo": "0.5",
+      "sol": "ns3",
+      "meta": 8
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Homem 70 kg, Na 160, soro glicosado 5%: −3,7/L; meta 10 → 2,69 L",
+    "input": {
+      "na": 160,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "sg5",
+      "meta": 10
+    },
+    "expected": {
+      "raw": {
+        "delta": -3.721,
+        "vol": 2.6875
+      },
+      "level": "info",
+      "verdict": "reduzir",
+      "tol": 0.01
+    },
+    "originalInput": {
+      "na": 160,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "sg5",
+      "meta": 10
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Homem 70 kg, Na 125, Ringer lactato: +0,21/L",
+    "input": {
+      "na": 125,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "rl"
+    },
+    "expected": {
+      "raw": {
+        "delta": 0.2093
+      },
+      "level": "info",
+      "tol": 0.01
+    },
+    "originalInput": {
+      "na": 125,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "rl"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "NaCl 0,9% + 20 mEq/L de K, Na 120, 70 kg homem: +1,26/L",
+    "input": {
+      "na": 120,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "ns09",
+      "kadd": 20
+    },
+    "expected": {
+      "raw": {
+        "delta": 1.2558
+      },
+      "level": "info",
+      "tol": 0.01
+    },
+    "originalInput": {
+      "na": 120,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "ns09",
+      "kadd": 20
+    },
+    "expandedZeroOptions": []
+  }
+]

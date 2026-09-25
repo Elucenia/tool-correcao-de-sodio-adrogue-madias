@@ -1,0 +1,245 @@
+{
+  "tool": {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "title": "Correção do sódio (Adrogué-Madias)",
+    "short": "Variação do sódio por litro de solução",
+    "desc": "Fórmula de Adrogué-Madias: quanto 1 litro de cada solução (NaCl 3%, 0,9%, Ringer, soro glicosado) muda o sódio sérico, e o volume para a meta de correção.",
+    "lead": "Prevê a variação do sódio sérico após 1 litro de uma solução, na hiponatremia ou na hipernatremia, e o volume necessário para uma meta de correção.",
+    "spec": [
+      "medicina-intensiva",
+      "medicina-de-emergencia",
+      "nefrologia",
+      "clinica-medica"
+    ],
+    "fields": [
+      [
+        "na",
+        "Sódio atual",
+        "num",
+        {
+          "min": 100,
+          "max": 190,
+          "unit": "mEq/L",
+          "ph": "118"
+        }
+      ],
+      [
+        "peso",
+        "Peso",
+        "num",
+        {
+          "min": 2,
+          "max": 300,
+          "step": 0.1,
+          "unit": "kg",
+          "ph": "70"
+        }
+      ],
+      [
+        "grupo",
+        "Água corporal total",
+        "radio",
+        {
+          "opts": {
+            "0.6": "Homem &lt; 65 anos ou criança",
+            "0.5": "Mulher &lt; 65 anos ou homem ≥ 65",
+            "0.45": "Mulher ≥ 65 anos"
+          }
+        }
+      ],
+      [
+        "sol",
+        "Solução infundida",
+        "sel",
+        {
+          "opts": {
+            "ns3": "NaCl 3% (Na 513 mEq/L)",
+            "ns09": "NaCl 0,9% (Na 154 mEq/L)",
+            "rl": "Ringer lactato (Na 130, K 4 mEq/L)",
+            "ns045": "NaCl 0,45% (Na 77 mEq/L)",
+            "ns02": "NaCl 0,2% em glicose 5% (Na 34 mEq/L)",
+            "sg5": "Soro glicosado 5% (sem sódio)"
+          }
+        }
+      ],
+      [
+        "kadd",
+        "Potássio adicionado ao soro",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "unit": "mEq/L",
+          "ph": "0",
+          "opt": true
+        }
+      ],
+      [
+        "meta",
+        "Variação desejada do sódio",
+        "num",
+        {
+          "min": 1,
+          "max": 15,
+          "unit": "mEq/L",
+          "ph": "8",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Variação do Na por litro</strong> = (Na da solução + K da solução − Na sérico) ÷ (água corporal total + 1).</p><p>Água corporal total = peso × 0,6 (homem &lt; 65 anos e criança), 0,5 (mulher &lt; 65 ou homem ≥ 65) ou 0,45 (mulher ≥ 65).</p><p><strong>Volume para a meta</strong> = meta ÷ variação por litro.</p>",
+    "table": [
+      [
+        "Situação",
+        "Limite de correção sugerido"
+      ],
+      [
+        "Hiponatremia crônica",
+        "Aumento de 10 mEq/L nas primeiras 24 h e 8 mEq/L a cada 24 h seguintes (Spasovski, 2014)"
+      ],
+      [
+        "Hiponatremia grave sintomática",
+        "Bolus de NaCl 3% para subir 5 mEq/L na primeira hora"
+      ],
+      [
+        "Hipernatremia crônica",
+        "Queda de até 10 mEq/L em 24 h"
+      ]
+    ],
+    "tips": [
+      "A fórmula supõe sistema fechado: diurese aquosa (ex.: após corrigir hipovolemia, suspender desmopressina ou tiazídico) pode elevar o sódio muito mais rápido que o previsto.",
+      "Na hiponatremia grave, o risco de desmielinização osmótica é maior em alcoolistas, desnutridos, hipocalêmicos e hepatopatas: nesses casos, mire em até 8 mEq/L em 24 h.",
+      "Se a correção passar do limite, a diretriz europeia sugere relowering com água livre (soro glicosado) e desmopressina, com acompanhamento especializado.",
+      "Potássio adicionado ao soro eleva o sódio como se fosse sódio: inclua-o no cálculo.",
+      "Dose o sódio a cada 2 a 4 horas no início do tratamento; a fórmula dá a direção, não substitui a monitorização."
+    ],
+    "sources": [
+      [
+        "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med, 2000.",
+        "https://doi.org/10.1056/NEJM200005253422107"
+      ],
+      [
+        "Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med, 2000.",
+        "https://doi.org/10.1056/NEJM200005183422006"
+      ],
+      [
+        "Spasovski G et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol, 2014.",
+        "https://doi.org/10.1530/EJE-13-1020"
+      ]
+    ],
+    "cases": [
+      [
+        "Mulher 60 kg, Na 110, NaCl 3%: +13,0/L; meta 8 → 615 mL",
+        {
+          "na": 110,
+          "peso": 60,
+          "grupo": "0.5",
+          "sol": "ns3",
+          "meta": 8
+        },
+        {
+          "raw": {
+            "delta": 13,
+            "vol": 0.6154,
+            "tbw": 30
+          },
+          "level": "info",
+          "main": "+13,0",
+          "tol": 0.01
+        }
+      ],
+      [
+        "Homem 70 kg, Na 160, soro glicosado 5%: −3,7/L; meta 10 → 2,69 L",
+        {
+          "na": 160,
+          "peso": 70,
+          "grupo": "0.6",
+          "sol": "sg5",
+          "meta": 10
+        },
+        {
+          "raw": {
+            "delta": -3.721,
+            "vol": 2.6875
+          },
+          "level": "info",
+          "verdict": "reduzir",
+          "tol": 0.01
+        }
+      ],
+      [
+        "Homem 70 kg, Na 125, Ringer lactato: +0,21/L",
+        {
+          "na": 125,
+          "peso": 70,
+          "grupo": "0.6",
+          "sol": "rl"
+        },
+        {
+          "raw": {
+            "delta": 0.2093
+          },
+          "level": "info",
+          "tol": 0.01
+        }
+      ],
+      [
+        "NaCl 0,9% + 20 mEq/L de K, Na 120, 70 kg homem: +1,26/L",
+        {
+          "na": 120,
+          "peso": 70,
+          "grupo": "0.6",
+          "sol": "ns09",
+          "kadd": 20
+        },
+        {
+          "raw": {
+            "delta": 1.2558
+          },
+          "level": "info",
+          "tol": 0.01
+        }
+      ]
+    ],
+    "batch": "urgencia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "urgencia",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/urgencia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "status": "restricted",
+    "reason": "O código transforma meta em volume por fórmula sem modelar diurese, evolução ou limites individualizados de correção. O alerta aparece apenas com meta >10. Suspender conversão terapêutica até explicitar cenário, horizonte temporal e protocolo de monitorização.",
+    "sourceUrl": "https://www.endocrinology.org/media/xhrhxhxm/emergency-management-of-severe-and-moderately-severely-symptomatic-hyponatraemia-in-adult-patients-2022.pdf",
+    "sourceTitle": "Society for Endocrinology — Emergency management of symptomatic hyponatraemia",
+    "sourceDate": "2022",
+    "publisherRegion": "Reino Unido / Society for Endocrinology",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "suppressLegacyFormula": true,
+    "formulaOverride": "Adrogué–Madias estima a variação de Na por 1 L: ([Na+K] da solução − Na sérico) / (água corporal total + 1). A estimativa não é uma ordem de infusão e não representa perdas ou mudanças em curso."
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/urgencia.php",
+    "sha256": "b24f3a77383430c3f3463168e78e88341034b3108bd712f3613ae32672dc281c",
+    "bytes": 121059
+  },
+  "clinicalValidation": "not-performed"
+}
