@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-correcao-de-sodio-adrogue-madias",
   "version": "0.1.0",
-  "description": "Correção do sódio (Adrogué-Madias) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Correção do sódio (Adrogué-Madias) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
