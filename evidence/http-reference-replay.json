@@ -1,0 +1,1163 @@
+{
+  "receipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "build": {
+    "id": "RYDdJbZxqrM8sgoyKEQc-",
+    "standaloneServer": {
+      "file": "reports/review-20261005-completion/deploy-lock/r5-isolated-runtime/.next/standalone/server.js",
+      "sha256": "631d43264038e7aa367b5405041eb3706d73fd3366925a7ef17a07119cfa166e",
+      "bytes": 10457
+    },
+    "catalogPin": {
+      "file": "deliveries/elucenia-next-hostinger-r5/.next/server/pages/en/tools.json",
+      "sha256": "33917dfdae9bea59cae22bfca34eaef2a21046a832af98c1a8d2718075de63ec",
+      "bytes": 103793
+    }
+  },
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r5 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "tool": {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "title": "Adrogué–Madias: variação teórica de sódio",
+    "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+    "implementationVersion": "correcao-de-sodio-adrogue-madias@native-2026-10-04+18dd63417647",
+    "sources": [
+      [
+        "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+        "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf"
+      ],
+      [
+        "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med, 2000.",
+        "https://doi.org/10.1056/NEJM200005253422107"
+      ],
+      [
+        "Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med, 2000.",
+        "https://doi.org/10.1056/NEJM200005183422006"
+      ],
+      [
+        "Spasovski G et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol, 2014.",
+        "https://doi.org/10.1530/EJE-13-1020"
+      ]
+    ],
+    "limits": "Estimativa estática em adultos; não calcula volume para atingir uma meta, velocidade, duração nem limites seguros de correção. Não inclui diurese, perdas e mudanças durante tratamento.",
+    "sourceEditionEvidence": [
+      {
+        "citation": "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+        "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med, 2000.",
+        "url": "https://doi.org/10.1056/NEJM200005253422107",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med, 2000.",
+        "url": "https://doi.org/10.1056/NEJM200005183422006",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Spasovski G et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol, 2014.",
+        "url": "https://doi.org/10.1530/EJE-13-1020",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      }
+    ],
+    "calculator": {
+      "file": "deliveries/elucenia-next-hostinger-r5/private/tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+      "sha256": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a",
+      "bytes": 525
+    },
+    "cases": 5,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "replayed": 5,
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "originalInput": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns3",
+        "kadd": 0,
+        "idade": 50
+      },
+      "input": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns3",
+        "kadd": 0,
+        "idade": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "delta": 9.13953488372093,
+          "tbw": 42
+        },
+        "main": "9,14",
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "9,14",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 9.13953488372093,
+          "tbw": 42
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "na": 120,
+            "peso": 70,
+            "grupo": "0.6",
+            "sol": "ns3",
+            "kadd": 0,
+            "idade": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+          "startedAt": "2026-10-05T15:13:15.051Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "correcao-de-sodio-adrogue-madias",
+              "main": [
+                "9,14",
+                "mEq/L"
+              ],
+              "label": "Adrogué–Madias · ΔNa / 1 L",
+              "raw": {
+                "delta": 9.13953488372093,
+                "tbw": 42
+              },
+              "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "35126a09dc481f26c7e7c7d01bee676410b8e2626dd9bd0cee97a87c2b758e9c",
+          "bytes": 267,
+          "elapsedMs": 3.667600000000675
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "startedAt": "2026-10-05T15:13:15.051Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "correcao-de-sodio-adrogue-madias",
+            "main": [
+              "9,14",
+              "mEq/L"
+            ],
+            "label": "Adrogué–Madias · ΔNa / 1 L",
+            "raw": {
+              "delta": 9.13953488372093,
+              "tbw": 42
+            },
+            "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "35126a09dc481f26c7e7c7d01bee676410b8e2626dd9bd0cee97a87c2b758e9c",
+        "bytes": 267,
+        "elapsedMs": 3.667600000000675
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "9,14",
+            "obtained": "9,14",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.delta",
+            "expected": 9.13953488372093,
+            "obtained": 9.13953488372093,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.delta",
+            "expected": 9.13953488372093,
+            "obtained": 9.13953488372093,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "9,14",
+            "obtained": "9,14",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mEq/L",
+            "obtained": "mEq/L",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Salina0,9%; sem potássio adicional",
+      "originalInput": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns09",
+        "kadd": null,
+        "idade": 50
+      },
+      "input": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns09",
+        "kadd": null,
+        "idade": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "delta": 0.7906976744186046,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "0,79",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.7906976744186046,
+          "tbw": 42
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "na": 120,
+            "peso": 70,
+            "grupo": "0.6",
+            "sol": "ns09",
+            "kadd": null,
+            "idade": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+          "startedAt": "2026-10-05T15:13:15.366Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "correcao-de-sodio-adrogue-madias",
+              "main": [
+                "0,79",
+                "mEq/L"
+              ],
+              "label": "Adrogué–Madias · ΔNa / 1 L",
+              "raw": {
+                "delta": 0.7906976744186046,
+                "tbw": 42
+              },
+              "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "bb6399b49ad30c48ca1a190c0cacfcbd13834df803768c6d635e5cd3f71e1964",
+          "bytes": 269,
+          "elapsedMs": 3.3392000000021653
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "startedAt": "2026-10-05T15:13:15.366Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "correcao-de-sodio-adrogue-madias",
+            "main": [
+              "0,79",
+              "mEq/L"
+            ],
+            "label": "Adrogué–Madias · ΔNa / 1 L",
+            "raw": {
+              "delta": 0.7906976744186046,
+              "tbw": 42
+            },
+            "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "bb6399b49ad30c48ca1a190c0cacfcbd13834df803768c6d635e5cd3f71e1964",
+        "bytes": 269,
+        "elapsedMs": 3.3392000000021653
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.delta",
+            "expected": 0.7906976744186046,
+            "obtained": 0.7906976744186046,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.delta",
+            "expected": 0.7906976744186046,
+            "obtained": 0.7906976744186046,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,79",
+            "obtained": "0,79",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mEq/L",
+            "obtained": "mEq/L",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Ringer130+4; K adicional20",
+      "originalInput": {
+        "na": 134,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "rl",
+        "kadd": 20,
+        "idade": 50
+      },
+      "input": {
+        "na": 134,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "rl",
+        "kadd": 20,
+        "idade": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "delta": 0.46511627906976744,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "0,47",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.46511627906976744,
+          "tbw": 42
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "na": 134,
+            "peso": 70,
+            "grupo": "0.6",
+            "sol": "rl",
+            "kadd": 20,
+            "idade": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+          "startedAt": "2026-10-05T15:13:15.679Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "correcao-de-sodio-adrogue-madias",
+              "main": [
+                "0,47",
+                "mEq/L"
+              ],
+              "label": "Adrogué–Madias · ΔNa / 1 L",
+              "raw": {
+                "delta": 0.46511627906976744,
+                "tbw": 42
+              },
+              "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "8bc17763378d0d8a5a505b53e6dc85ea0c3ea927f68e7203efe33692a1598e48",
+          "bytes": 270,
+          "elapsedMs": 3.2674000000042724
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "startedAt": "2026-10-05T15:13:15.679Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "correcao-de-sodio-adrogue-madias",
+            "main": [
+              "0,47",
+              "mEq/L"
+            ],
+            "label": "Adrogué–Madias · ΔNa / 1 L",
+            "raw": {
+              "delta": 0.46511627906976744,
+              "tbw": 42
+            },
+            "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "8bc17763378d0d8a5a505b53e6dc85ea0c3ea927f68e7203efe33692a1598e48",
+        "bytes": 270,
+        "elapsedMs": 3.2674000000042724
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.delta",
+            "expected": 0.46511627906976744,
+            "obtained": 0.46511627906976744,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.delta",
+            "expected": 0.46511627906976744,
+            "obtained": 0.46511627906976744,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,47",
+            "obtained": "0,47",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mEq/L",
+            "obtained": "mEq/L",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "Solução sem sódio; ΔNa negativo",
+      "originalInput": {
+        "na": 140,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "sg5",
+        "kadd": null,
+        "idade": 50
+      },
+      "input": {
+        "na": 140,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "sg5",
+        "kadd": null,
+        "idade": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "delta": -3.255813953488372,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "-3,26",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -3.255813953488372,
+          "tbw": 42
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "na": 140,
+            "peso": 70,
+            "grupo": "0.6",
+            "sol": "sg5",
+            "kadd": null,
+            "idade": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+          "startedAt": "2026-10-05T15:13:15.993Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "correcao-de-sodio-adrogue-madias",
+              "main": [
+                "-3,26",
+                "mEq/L"
+              ],
+              "label": "Adrogué–Madias · ΔNa / 1 L",
+              "raw": {
+                "delta": -3.255813953488372,
+                "tbw": 42
+              },
+              "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "5740d920f51dd7bc8880ebd6cd6446e3e372651fc6f3ff9cc0c900037d97a529",
+          "bytes": 270,
+          "elapsedMs": 3.1780999999973574
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "startedAt": "2026-10-05T15:13:15.993Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "correcao-de-sodio-adrogue-madias",
+            "main": [
+              "-3,26",
+              "mEq/L"
+            ],
+            "label": "Adrogué–Madias · ΔNa / 1 L",
+            "raw": {
+              "delta": -3.255813953488372,
+              "tbw": 42
+            },
+            "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "5740d920f51dd7bc8880ebd6cd6446e3e372651fc6f3ff9cc0c900037d97a529",
+        "bytes": 270,
+        "elapsedMs": 3.1780999999973574
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.delta",
+            "expected": -3.255813953488372,
+            "obtained": -3.255813953488372,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.delta",
+            "expected": -3.255813953488372,
+            "obtained": -3.255813953488372,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.tbw",
+            "expected": 42,
+            "obtained": 42,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "-3,26",
+            "obtained": "-3,26",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mEq/L",
+            "obtained": "mEq/L",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "kind": "native-source-reference",
+      "index": 4,
+      "name": "Fração0,45 escolhida explicitamente",
+      "originalInput": {
+        "na": 130,
+        "peso": 60,
+        "grupo": "0.45",
+        "sol": "ns045",
+        "kadd": 0,
+        "idade": 50
+      },
+      "input": {
+        "na": 130,
+        "peso": 60,
+        "grupo": "0.45",
+        "sol": "ns045",
+        "kadd": 0,
+        "idade": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "delta": -1.8928571428571428,
+          "tbw": 27
+        },
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "-1,89",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -1.8928571428571428,
+          "tbw": 27
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "na": 130,
+            "peso": 60,
+            "grupo": "0.45",
+            "sol": "ns045",
+            "kadd": 0,
+            "idade": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+          "startedAt": "2026-10-05T15:13:16.293Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "correcao-de-sodio-adrogue-madias",
+              "main": [
+                "-1,89",
+                "mEq/L"
+              ],
+              "label": "Adrogué–Madias · ΔNa / 1 L",
+              "raw": {
+                "delta": -1.8928571428571428,
+                "tbw": 27
+              },
+              "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "aa90b079ef046c7f76c9edd3dd0f84c96d809f6bf525fa5288653762b528b104",
+          "bytes": 271,
+          "elapsedMs": 2.8695999999981723
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/correcao-de-sodio-adrogue-madias/calculate",
+        "startedAt": "2026-10-05T15:13:16.293Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "correcao-de-sodio-adrogue-madias",
+            "main": [
+              "-1,89",
+              "mEq/L"
+            ],
+            "label": "Adrogué–Madias · ΔNa / 1 L",
+            "raw": {
+              "delta": -1.8928571428571428,
+              "tbw": 27
+            },
+            "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "aa90b079ef046c7f76c9edd3dd0f84c96d809f6bf525fa5288653762b528b104",
+        "bytes": 271,
+        "elapsedMs": 2.8695999999981723
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.delta",
+            "expected": -1.8928571428571428,
+            "obtained": -1.8928571428571428,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.tbw",
+            "expected": 27,
+            "obtained": 27,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.delta",
+            "expected": -1.8928571428571428,
+            "obtained": -1.8928571428571428,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.tbw",
+            "expected": 27,
+            "obtained": 27,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "-1,89",
+            "obtained": "-1,89",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mEq/L",
+            "obtained": "mEq/L",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "endBindings": true
+}

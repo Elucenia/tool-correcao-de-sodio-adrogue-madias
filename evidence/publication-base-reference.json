@@ -1,0 +1,86 @@
+{
+  "schema": "elucenia-publication-base-reference",
+  "checkedAt": "2026-10-05T15:38:24.003Z",
+  "repo": "Elucenia/tool-correcao-de-sodio-adrogue-madias",
+  "branch": "main",
+  "commit": "437e2f9476ef9c22d1c5dbbdd5eb1059868de359",
+  "treeSha": "373eba578b2bcf1ef199f1576cf39357f5692dcb",
+  "status": "protected-hashes-unchanged",
+  "protectedFiles": [
+    {
+      "file": "LICENSE",
+      "historicalGitBlobSha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "currentGitBlobSha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "candidateGitBlobSha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "candidateSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "same": true
+    },
+    {
+      "file": "NOTICE",
+      "historicalGitBlobSha1": "3b33addfceb02618ba084ac8cd57e8a47d746d52",
+      "currentGitBlobSha1": "3b33addfceb02618ba084ac8cd57e8a47d746d52",
+      "candidateGitBlobSha1": "3b33addfceb02618ba084ac8cd57e8a47d746d52",
+      "candidateSha256": "0f0aa181bec219495e1e66a411cd6b180dc6ebfcb4aa5cfda09b050b53657a0f",
+      "same": true
+    },
+    {
+      "file": "AUTHORSHIP.md",
+      "historicalGitBlobSha1": "bd748fd94242812c91b2508e97fbdc49b8d2832c",
+      "currentGitBlobSha1": "bd748fd94242812c91b2508e97fbdc49b8d2832c",
+      "candidateGitBlobSha1": "bd748fd94242812c91b2508e97fbdc49b8d2832c",
+      "candidateSha256": "f8c558dd833505524ca12951b20c878353bdf10cdb524187019b9f985fd58aae",
+      "same": true
+    },
+    {
+      "file": "CITATION.cff",
+      "historicalGitBlobSha1": "3813d50712ed81d64086c5a143931f3acd94b17a",
+      "currentGitBlobSha1": "3813d50712ed81d64086c5a143931f3acd94b17a",
+      "candidateGitBlobSha1": "3813d50712ed81d64086c5a143931f3acd94b17a",
+      "candidateSha256": "723f974dd6daa71c2d37596aeaf1dde089b9351d3bd9731da9ab3a2896bbdd0d",
+      "same": true
+    },
+    {
+      "file": "SECURITY.md",
+      "historicalGitBlobSha1": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "currentGitBlobSha1": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "candidateGitBlobSha1": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "candidateSha256": "3c20d46e436116be0c673f0260b24bbc2193fafbd15fb4659bf0e545b452487e",
+      "same": true
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "historicalGitBlobSha1": "1decc4e58d9394ee688be67dc61d7e6453a873bb",
+      "currentGitBlobSha1": "1decc4e58d9394ee688be67dc61d7e6453a873bb",
+      "candidateGitBlobSha1": "1decc4e58d9394ee688be67dc61d7e6453a873bb",
+      "candidateSha256": "a47e720ca2e41f2fb65f72a5b250d39861f7c33d38b5c55134f56e1106386e9e",
+      "same": true
+    },
+    {
+      "file": ".github/workflows/ci.yml",
+      "historicalGitBlobSha1": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "currentGitBlobSha1": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "candidateGitBlobSha1": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "candidateSha256": "bdbefea1fc6b1d8847725c698f62920917bc8d6504bfe8ed622ed2d5aaf7f160",
+      "same": true
+    },
+    {
+      "file": ".gitattributes",
+      "historicalGitBlobSha1": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "currentGitBlobSha1": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "candidateGitBlobSha1": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "candidateSha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "same": true
+    },
+    {
+      "file": ".gitignore",
+      "historicalGitBlobSha1": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "currentGitBlobSha1": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "candidateGitBlobSha1": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "candidateSha256": "763fb702ccbb9bfd8549ca3d0844c731b22aca4e665a2b61d1bb764b64f734d8",
+      "same": true
+    }
+  ],
+  "sourceReceiptSha256": "afde2d1f95a20293350a160c2edfbbb80c4c8a740fbb8c2ad29790c83e17a082",
+  "newProtectedFilesAreFirstAddition": false,
+  "publicationPerformed": false
+}

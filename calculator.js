@@ -1,9 +1,2 @@
-/* tool-correcao-de-sodio-adrogue-madias · ELUCENIA · https://github.com/Elucenia/tool-correcao-de-sodio-adrogue-madias
-   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
-   Standalone integration. Package metadata and rights: README.md. */
-(function(root){'use strict';
-function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
-const TOOL=freeze({"id":"correcao-de-sodio-adrogue-madias","title":"Correção do sódio (Adrogué-Madias)","fields":[["na","Sódio atual","num",{"min":100,"max":190,"unit":"mEq/L","ph":"118"}],["peso","Peso","num",{"min":2,"max":300,"step":0.1,"unit":"kg","ph":"70"}],["grupo","Água corporal total","radio",{"opts":{"0.6":"Homem &lt; 65 anos ou criança","0.5":"Mulher &lt; 65 anos ou homem ≥ 65","0.45":"Mulher ≥ 65 anos"}}],["sol","Solução infundida","sel",{"opts":{"ns3":"NaCl 3% (Na 513 mEq/L)","ns09":"NaCl 0,9% (Na 154 mEq/L)","rl":"Ringer lactato (Na 130, K 4 mEq/L)","ns045":"NaCl 0,45% (Na 77 mEq/L)","ns02":"NaCl 0,2% em glicose 5% (Na 34 mEq/L)","sg5":"Soro glicosado 5% (sem sódio)"}}],["kadd","Potássio adicionado ao soro","num",{"min":0,"max":60,"unit":"mEq/L","ph":"0","opt":true}],["meta","Variação desejada do sódio","num",{"min":1,"max":15,"unit":"mEq/L","ph":"8","opt":true}]],"config":null,"reviewStatus":"restricted","clinicalValidation":"not-performed"});
-function calculate(){return {error:'Cálculo suspenso: consulte a revisão e a fonte oficial.',code:'REVIEW_REQUIRED',id:TOOL.id};}
-const api=Object.freeze({metadata:TOOL,calculate});if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.EluceniaTool=api;
-})(typeof globalThis!=='undefined'?globalThis:this);
+/* Per-tool entry; original adapter bytes and method notices are preserved. */
+module.exports=require('./engine/tool-code/correcao-de-sodio-adrogue-madias/calculator.js');

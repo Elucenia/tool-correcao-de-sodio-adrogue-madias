@@ -1,10 +1,11 @@
 {
   "tool": {
     "id": "correcao-de-sodio-adrogue-madias",
-    "title": "Correção do sódio (Adrogué-Madias)",
-    "short": "Variação do sódio por litro de solução",
-    "desc": "Fórmula de Adrogué-Madias: quanto 1 litro de cada solução (NaCl 3%, 0,9%, Ringer, soro glicosado) muda o sódio sérico, e o volume para a meta de correção.",
-    "lead": "Prevê a variação do sódio sérico após 1 litro de uma solução, na hiponatremia ou na hipernatremia, e o volume necessário para uma meta de correção.",
+    "title": "Adrogué–Madias: variação teórica de sódio",
+    "short": "Estima a variação teórica por um litro de solução",
+    "desc": "Estima a variação teórica do sódio por um litro de solução no modelo documentado. Não calcula uma prescrição de volume, velocidade ou meta de correção.",
+    "lead": "Estima a variação teórica do sódio por um litro de solução no modelo documentado. Não calcula uma prescrição de volume, velocidade ou meta de correção.",
+    "kind": "Calculadora",
     "spec": [
       "medicina-intensiva",
       "medicina-de-emergencia",
@@ -28,7 +29,7 @@
         "Peso",
         "num",
         {
-          "min": 2,
+          "min": 30,
           "max": 300,
           "step": 0.1,
           "unit": "kg",
@@ -37,13 +38,13 @@
       ],
       [
         "grupo",
-        "Água corporal total",
-        "radio",
+        "Fração estimada de água corporal total",
+        "sel",
         {
           "opts": {
-            "0.6": "Homem &lt; 65 anos ou criança",
-            "0.5": "Mulher &lt; 65 anos ou homem ≥ 65",
-            "0.45": "Mulher ≥ 65 anos"
+            "0.6": "0,60",
+            "0.5": "0,50",
+            "0.45": "0,45"
           }
         }
       ],
@@ -75,45 +76,22 @@
         }
       ],
       [
-        "meta",
-        "Variação desejada do sódio",
+        "idade",
+        "Idade",
         "num",
         {
-          "min": 1,
-          "max": 15,
-          "unit": "mEq/L",
-          "ph": "8",
-          "opt": true
+          "min": 18,
+          "max": 110,
+          "unit": "anos"
         }
       ]
     ],
-    "formula": "<p><strong>Variação do Na por litro</strong> = (Na da solução + K da solução − Na sérico) ÷ (água corporal total + 1).</p><p>Água corporal total = peso × 0,6 (homem &lt; 65 anos e criança), 0,5 (mulher &lt; 65 ou homem ≥ 65) ou 0,45 (mulher ≥ 65).</p><p><strong>Volume para a meta</strong> = meta ÷ variação por litro.</p>",
-    "table": [
-      [
-        "Situação",
-        "Limite de correção sugerido"
-      ],
-      [
-        "Hiponatremia crônica",
-        "Aumento de 10 mEq/L nas primeiras 24 h e 8 mEq/L a cada 24 h seguintes (Spasovski, 2014)"
-      ],
-      [
-        "Hiponatremia grave sintomática",
-        "Bolus de NaCl 3% para subir 5 mEq/L na primeira hora"
-      ],
-      [
-        "Hipernatremia crônica",
-        "Queda de até 10 mEq/L em 24 h"
-      ]
-    ],
-    "tips": [
-      "A fórmula supõe sistema fechado: diurese aquosa (ex.: após corrigir hipovolemia, suspender desmopressina ou tiazídico) pode elevar o sódio muito mais rápido que o previsto.",
-      "Na hiponatremia grave, o risco de desmielinização osmótica é maior em alcoolistas, desnutridos, hipocalêmicos e hepatopatas: nesses casos, mire em até 8 mEq/L em 24 h.",
-      "Se a correção passar do limite, a diretriz europeia sugere relowering com água livre (soro glicosado) e desmopressina, com acompanhamento especializado.",
-      "Potássio adicionado ao soro eleva o sódio como se fosse sódio: inclua-o no cálculo.",
-      "Dose o sódio a cada 2 a 4 horas no início do tratamento; a fórmula dá a direção, não substitui a monitorização."
-    ],
+    "formula": "<p>ΔNa por 1 L = (Na da solução + K da solução − Na sérico)/(água corporal total + 1); água corporal total = peso × fração informada.</p>",
     "sources": [
+      [
+        "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+        "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf"
+      ],
       [
         "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med, 2000.",
         "https://doi.org/10.1056/NEJM200005253422107"
@@ -129,108 +107,425 @@
     ],
     "cases": [
       [
-        "Mulher 60 kg, Na 110, NaCl 3%: +13,0/L; meta 8 → 615 mL",
+        "Vetor sintético principal de referência",
         {
-          "na": 110,
-          "peso": 60,
-          "grupo": "0.5",
+          "na": 120,
+          "peso": 70,
+          "grupo": "0.6",
           "sol": "ns3",
-          "meta": 8
+          "kadd": 0,
+          "idade": 50
         },
         {
           "raw": {
-            "delta": 13,
-            "vol": 0.6154,
-            "tbw": 30
+            "delta": 9.13953488372093,
+            "tbw": 42
           },
-          "level": "info",
-          "main": "+13,0",
-          "tol": 0.01
+          "main": "9,14",
+          "tol": 1e-9
         }
       ],
       [
-        "Homem 70 kg, Na 160, soro glicosado 5%: −3,7/L; meta 10 → 2,69 L",
-        {
-          "na": 160,
-          "peso": 70,
-          "grupo": "0.6",
-          "sol": "sg5",
-          "meta": 10
-        },
-        {
-          "raw": {
-            "delta": -3.721,
-            "vol": 2.6875
-          },
-          "level": "info",
-          "verdict": "reduzir",
-          "tol": 0.01
-        }
-      ],
-      [
-        "Homem 70 kg, Na 125, Ringer lactato: +0,21/L",
-        {
-          "na": 125,
-          "peso": 70,
-          "grupo": "0.6",
-          "sol": "rl"
-        },
-        {
-          "raw": {
-            "delta": 0.2093
-          },
-          "level": "info",
-          "tol": 0.01
-        }
-      ],
-      [
-        "NaCl 0,9% + 20 mEq/L de K, Na 120, 70 kg homem: +1,26/L",
+        "Salina0,9%; sem potássio adicional",
         {
           "na": 120,
           "peso": 70,
           "grupo": "0.6",
           "sol": "ns09",
-          "kadd": 20
+          "kadd": null,
+          "idade": 50
         },
         {
           "raw": {
-            "delta": 1.2558
+            "delta": 0.7906976744186046,
+            "tbw": 42
           },
-          "level": "info",
-          "tol": 0.01
+          "tol": 1e-9
+        }
+      ],
+      [
+        "Ringer130+4; K adicional20",
+        {
+          "na": 134,
+          "peso": 70,
+          "grupo": "0.6",
+          "sol": "rl",
+          "kadd": 20,
+          "idade": 50
+        },
+        {
+          "raw": {
+            "delta": 0.46511627906976744,
+            "tbw": 42
+          },
+          "tol": 1e-9
+        }
+      ],
+      [
+        "Solução sem sódio; ΔNa negativo",
+        {
+          "na": 140,
+          "peso": 70,
+          "grupo": "0.6",
+          "sol": "sg5",
+          "kadd": null,
+          "idade": 50
+        },
+        {
+          "raw": {
+            "delta": -3.255813953488372,
+            "tbw": 42
+          },
+          "tol": 1e-9
+        }
+      ],
+      [
+        "Fração0,45 escolhida explicitamente",
+        {
+          "na": 130,
+          "peso": 60,
+          "grupo": "0.45",
+          "sol": "ns045",
+          "kadd": 0,
+          "idade": 50
+        },
+        {
+          "raw": {
+            "delta": -1.8928571428571428,
+            "tbw": 27
+          },
+          "tol": 1e-9
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
-      "testedAt": "2026-09-25",
-      "total": 4,
-      "passed": 4,
-      "failures": []
+      "testedAt": "2026-10-03",
+      "total": 5,
+      "passed": 5,
+      "failures": [],
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Synthetic source-rule arithmetic checks. Independent clinical validation not performed."
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
-    }
-  },
-  "review": {
-    "id": "correcao-de-sodio-adrogue-madias",
-    "status": "restricted",
-    "reason": "O código transforma meta em volume por fórmula sem modelar diurese, evolução ou limites individualizados de correção. O alerta aparece apenas com meta >10. Suspender conversão terapêutica até explicitar cenário, horizonte temporal e protocolo de monitorização.",
-    "sourceUrl": "https://www.endocrinology.org/media/xhrhxhxm/emergency-management-of-severe-and-moderately-severely-symptomatic-hyponatraemia-in-adult-patients-2022.pdf",
-    "sourceTitle": "Society for Endocrinology — Emergency management of symptomatic hyponatraemia",
-    "sourceDate": "2022",
-    "publisherRegion": "Reino Unido / Society for Endocrinology",
-    "checkedAt": "2026-09-25",
+      "status": "passed",
+      "testedAt": "2026-10-03",
+      "total": 28,
+      "passed": 28,
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+      "sourceRowCount": 28,
+      "uniqueApiInputCount": 25,
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "audit": {
+          "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+          "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+        },
+        "sourceRows": 28,
+        "uniqueApiInputs": 25,
+        "duplicateRows": 3,
+        "duplicates": [
+          {
+            "first": 6,
+            "repeat": 9,
+            "input": {
+              "na": null,
+              "peso": 70,
+              "grupo": "0.6",
+              "sol": "ns3",
+              "kadd": 0,
+              "idade": 50
+            }
+          },
+          {
+            "first": 11,
+            "repeat": 14,
+            "input": {
+              "na": 120,
+              "peso": null,
+              "grupo": "0.6",
+              "sol": "ns3",
+              "kadd": 0,
+              "idade": 50
+            }
+          },
+          {
+            "first": 24,
+            "repeat": 27,
+            "input": {
+              "na": 120,
+              "peso": 70,
+              "grupo": "0.6",
+              "sol": "ns3",
+              "kadd": 0,
+              "idade": null
+            }
+          }
+        ],
+        "coverageStatusUnchanged": true
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "limits": "Estimativa estática em adultos; não calcula volume para atingir uma meta, velocidade, duração nem limites seguros de correção. Não inclui diurese, perdas e mudanças durante tratamento.",
+    "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+    "currentMethodSource": {
+      "title": "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+      "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+      "version": "Adrogué–Madias 2000; variação teórica por 1 L",
+      "checkedAt": "2026-10-03",
+      "access": "official-guideline"
+    },
+    "primaryVerification": {
+      "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+      "checked": "Diretriz IAEM, versão 1.0, maio de 2024: equação com sódio e potássio, denominador para 1 L e limitações por diurese e perdas. Concentrações das formulações declaradas e entradas sintéticas conferidas.",
+      "access": "official-guideline"
+    },
     "clinicalValidation": "not-performed",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "Adrogué–Madias estima a variação de Na por 1 L: ([Na+K] da solução − Na sérico) / (água corporal total + 1). A estimativa não é uma ordem de infusão e não representa perdas ou mudanças em curso."
+    "languageReview": "not-performed",
+    "reviewStatus": "needs-review",
+    "implementationStatus": "available",
+    "versionEvidence": {
+      "status": "explicit-implemented-variant-and-existing-source-proofs-recorded",
+      "checkedAt": "2026-10-04T17:52:09.841Z",
+      "declaredMethodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+      "implementedVariant": "ΔNa por 1 L = (Na da solução + K da solução − Na sérico)/(água corporal total + 1); água corporal total = peso × fração informada.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "na",
+            "label": "Sódio atual",
+            "type": "num",
+            "min": 100,
+            "max": 190,
+            "unit": "mEq/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "peso",
+            "label": "Peso",
+            "type": "num",
+            "min": 30,
+            "max": 300,
+            "unit": "kg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "grupo",
+            "label": "Fração estimada de água corporal total",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0.6": "0,60",
+              "0.5": "0,50",
+              "0.45": "0,45"
+            }
+          },
+          {
+            "key": "sol",
+            "label": "Solução infundida",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "ns3": "NaCl 3% (Na 513 mEq/L)",
+              "ns09": "NaCl 0,9% (Na 154 mEq/L)",
+              "rl": "Ringer lactato (Na 130, K 4 mEq/L)",
+              "ns045": "NaCl 0,45% (Na 77 mEq/L)",
+              "ns02": "NaCl 0,2% em glicose 5% (Na 34 mEq/L)",
+              "sg5": "Soro glicosado 5% (sem sódio)"
+            }
+          },
+          {
+            "key": "kadd",
+            "label": "Potássio adicionado ao soro",
+            "type": "num",
+            "min": 0,
+            "max": 60,
+            "unit": "mEq/L",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "num",
+            "min": 18,
+            "max": 110,
+            "unit": "anos",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "723b3c0b607208fa88983b1dfe2281d6a1245c2aeaaae70909659142dc848851",
+        "hashInputDefinition": "SHA256 of UTF8 JSON.stringify({id:tool.id,fields:tool.fields,formula:tool.formula,config:tool.config||null}), preserving declared order/value types; not a hash of versionEvidence.inputContract.fields display projection."
+      },
+      "sourceEditions": [
+        {
+          "citation": "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+          "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med, 2000.",
+          "url": "https://doi.org/10.1056/NEJM200005253422107",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med, 2000.",
+          "url": "https://doi.org/10.1056/NEJM200005183422006",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Spasovski G et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol, 2014.",
+          "url": "https://doi.org/10.1530/EJE-13-1020",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        }
+      ],
+      "existingSourceEvidence": {
+        "currentMethodSource": {
+          "title": "IAEM · Hyponatraemia guideline v1.0 · maio de 2024",
+          "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+          "version": "Adrogué–Madias 2000; variação teórica por 1 L",
+          "checkedAt": "2026-10-03",
+          "access": "official-guideline"
+        },
+        "primaryVerification": {
+          "url": "https://iaem.ie/wp-content/uploads/wpfd/preview_files/The-Assessment-and-Management-of-Hyponatraemia-in-the-Emergency-Department-V1.0%28899318df0e8c4df2bec997a7d369eafd%29.pdf",
+          "checked": "Diretriz IAEM, versão 1.0, maio de 2024: equação com sódio e potássio, denominador para 1 L e limitações por diurese e perdas. Concentrações das formulações declaradas e entradas sintéticas conferidas.",
+          "access": "official-guideline"
+        }
+      },
+      "editionRecordingScope": "The methodVersion and all previously recorded source access/edition proofs are transcribed unchanged. This technical normalization makes no new bibliographic/full-text/source-formula confirmation; named existing read scopes remain in existingSourceEvidence. A missing standardized container did not mean the method edition was missing.",
+      "publicationEditionConfirmationReevaluated": false,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by technical hashes or metadata normalization; retain existing bounded source arithmetic and clinical review separately.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-03",
+        "total": 28,
+        "passed": 28,
+        "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+        "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+        "sourceRowCount": 28,
+        "uniqueApiInputCount": 25,
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "audit": {
+            "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+            "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+          },
+          "sourceRows": 28,
+          "uniqueApiInputs": 25,
+          "duplicateRows": 3,
+          "duplicates": [
+            {
+              "first": 6,
+              "repeat": 9,
+              "input": {
+                "na": null,
+                "peso": 70,
+                "grupo": "0.6",
+                "sol": "ns3",
+                "kadd": 0,
+                "idade": 50
+              }
+            },
+            {
+              "first": 11,
+              "repeat": 14,
+              "input": {
+                "na": 120,
+                "peso": null,
+                "grupo": "0.6",
+                "sol": "ns3",
+                "kadd": 0,
+                "idade": 50
+              }
+            },
+            {
+              "first": 24,
+              "repeat": 27,
+              "input": {
+                "na": 120,
+                "peso": 70,
+                "grupo": "0.6",
+                "sol": "ns3",
+                "kadd": 0,
+                "idade": null
+              }
+            }
+          ],
+          "coverageStatusUnchanged": true
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "implementationHash": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a",
+      "implementationHashScope": "Exact current calculator.js bytes, individually verified in three app mirrors. This is not a full dependency-closure hash.",
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-04T17:52:09.841Z",
+          "scope": "First standardized container; explicit existing methodVersion and source proof objects preserved.",
+          "priorStandardizedContainerPresent": false,
+          "priorImplementationVersion": null,
+          "explicitMethodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+          "sourceEvidenceSha256": "704cc943abfc8209454edc8d033fc512447eddd807e69e6d7615d49c2cf38495",
+          "metadataAudit": {
+            "file": "reports/review-20261003/native-technical-bindings-audit-publication-final26.json",
+            "sha256": "e615fa3a42555f8fbeb4de8763893c3e981a73eae4c8c1994b33727e19ebd8c8"
+          }
+        }
+      ]
+    },
+    "implementationVersion": "correcao-de-sodio-adrogue-madias@native-2026-10-04+18dd63417647"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "b00fc797bc37e4fb2901988f7b2a2e3bcb0144ec87e9824f6cf261d0cfbf6045",
+  "omittedFullReferenceBanks": [
+    {
+      "at": "independentArithmeticTest.cases",
+      "rows": 28,
+      "sha256": "c8408ee9b0dd14c5859445579c687631a9c011ebc558b1811e9228147c6a759f",
+      "reason": "Full independent reference bank omitted from standalone public candidate; original evidence references retained"
+    },
+    {
+      "at": "versionEvidence.independentArithmetic.cases",
+      "rows": 28,
+      "sha256": "c8408ee9b0dd14c5859445579c687631a9c011ebc558b1811e9228147c6a759f",
+      "reason": "Embedded complete independent bank omitted; edition, scope and evidence references retained"
+    }
+  ],
+  "currentSource": {
+    "file": "apps/website/private/tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+    "bytes": 525,
+    "sha256": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a"
+  },
+  "clinicalValidation": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

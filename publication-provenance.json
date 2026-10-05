@@ -1,0 +1,270 @@
+{
+  "schema": "elucenia-current-per-tool-local-publication-candidate",
+  "id": "correcao-de-sodio-adrogue-madias",
+  "repository": "Elucenia/tool-correcao-de-sodio-adrogue-madias",
+  "parentCommitSha": "437e2f9476ef9c22d1c5dbbdd5eb1059868de359",
+  "baseTreeSha": "373eba578b2bcf1ef199f1576cf39357f5692dcb",
+  "protectedFiles": {
+    "LICENSE": {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    "NOTICE": {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b33addfceb02618ba084ac8cd57e8a47d746d52",
+      "size": 1687,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/3b33addfceb02618ba084ac8cd57e8a47d746d52"
+    },
+    "AUTHORSHIP.md": {
+      "path": "AUTHORSHIP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd748fd94242812c91b2508e97fbdc49b8d2832c",
+      "size": 3377,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/bd748fd94242812c91b2508e97fbdc49b8d2832c"
+    },
+    "CITATION.cff": {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3813d50712ed81d64086c5a143931f3acd94b17a",
+      "size": 977,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/3813d50712ed81d64086c5a143931f3acd94b17a"
+    },
+    "SECURITY.md": {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "size": 894,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+    },
+    "CONTRIBUTING.md": {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1decc4e58d9394ee688be67dc61d7e6453a873bb",
+      "size": 1483,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/1decc4e58d9394ee688be67dc61d7e6453a873bb"
+    },
+    ".github/workflows/ci.yml": {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "size": 279,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+    },
+    ".gitattributes": {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "size": 19,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+    },
+    ".gitignore": {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "size": 42,
+      "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+    }
+  },
+  "oldCandidate": {
+    "manifest": {
+      "file": "reports/review-20261003/github-publication-candidate-final36-v4.json",
+      "bytes": 6823260,
+      "sha256": "a3c528b12d7b5416fa0e62dda9e5106864bae7ff86710fa765934b5a3069e16c"
+    },
+    "rowId": "correcao-de-sodio-adrogue-madias",
+    "publicationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/correcao-de-sodio-adrogue-madias/publication-provenance.json",
+      "bytes": 5398,
+      "sha256": "66d2ca6bb0656d99506b76fdbdf93556182a78cc17e3f8e0d79b4ba0ed7b1474"
+    },
+    "integrationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/correcao-de-sodio-adrogue-madias/provenance.json",
+      "bytes": 45406,
+      "sha256": "4c9fe78da248d0909ed34115cd3fb47c071a1eec823a238a17bb6d55051c0ba1"
+    }
+  },
+  "currentSource": {
+    "file": "apps/website/private/tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+    "bytes": 525,
+    "sha256": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a"
+  },
+  "sourceToolSha256": "b00fc797bc37e4fb2901988f7b2a2e3bcb0144ec87e9824f6cf261d0cfbf6045",
+  "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+  "implementationVersion": "correcao-de-sodio-adrogue-madias@native-2026-10-04+18dd63417647",
+  "browserBundleSha256": "47045764d588290b0ec3f5441405246e229bacadd55548fd4a1e53b68e96723f",
+  "graph": {
+    "entry": "tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+    "modules": [
+      {
+        "file": "tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+        "bytes": 525,
+        "sha256": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a"
+      },
+      {
+        "file": "restored-methods.cjs",
+        "bytes": 4627,
+        "sha256": "6709bbe3e47b9ba6ac1ae99550b4509025822e536398cebdc239af5f7528d04e"
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "bytes": 2172,
+        "sha256": "7046d70ff2cdc2500d40bf2db0ff447eb7745478a96411dd4336c9bbd2cb6c00"
+      }
+    ],
+    "transforms": [
+      {
+        "file": "restored-methods.cjs",
+        "sourceSha256": "630dccade18742e4bc364b32f4ef4d6bc75aeceb262face8ddae806be7962c23",
+        "kind": "Deterministic AST selection of one existing define call plus unchanged shared arithmetic/schema helpers",
+        "selectedId": "correcao-de-sodio-adrogue-madias",
+        "otherMethodDefinitionsIncluded": 0
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "sourceSha256": "ccee00665e024104d254acf77a43609acb02d593e016ee8c6b7cebf3769da389",
+        "kind": "One original field/source contract only; no other tools, reference banks or original results",
+        "selectedId": "correcao-de-sodio-adrogue-madias",
+        "keys": [
+          "id",
+          "title",
+          "fields",
+          "sources"
+        ]
+      }
+    ]
+  },
+  "currentActualHttpEvidence": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "tests": {
+    "cases": 5,
+    "sourceNodeParityPassed": true,
+    "browserVmParityPassed": true,
+    "independentOracleDerived": false,
+    "actualBrowserDOMVerified": false
+  },
+  "rights": {
+    "historicalPayloadLicenseDeclaration": "Apache-2.0",
+    "currentIntegrationPackageLicenseDeclaration": "MIT",
+    "currentLegalFiles": [
+      {
+        "file": "apps/command-center/private/tool-code/correcao-de-sodio-adrogue-madias/LICENSE",
+        "bytes": 1229,
+        "sha256": "51c010d285894558695812b9883d9c9ae7c9c89526f43597917e778965e65d93"
+      },
+      {
+        "file": "apps/command-center/private/tool-code/correcao-de-sodio-adrogue-madias/NOTICE.md",
+        "bytes": 1183,
+        "sha256": "b7d5eaa1074d1673caf885ac49b38e9b54b2c6086b45072eacf7b3fe139d8a6d"
+      }
+    ],
+    "protectedFilesPreservedFromOldPayload": [],
+    "protectedRemoteAttributionReferences": {
+      "LICENSE": {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      "NOTICE": {
+        "path": "NOTICE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3b33addfceb02618ba084ac8cd57e8a47d746d52",
+        "size": 1687,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/3b33addfceb02618ba084ac8cd57e8a47d746d52"
+      },
+      "AUTHORSHIP.md": {
+        "path": "AUTHORSHIP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bd748fd94242812c91b2508e97fbdc49b8d2832c",
+        "size": 3377,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/bd748fd94242812c91b2508e97fbdc49b8d2832c"
+      },
+      "CITATION.cff": {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3813d50712ed81d64086c5a143931f3acd94b17a",
+        "size": 977,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/3813d50712ed81d64086c5a143931f3acd94b17a"
+      },
+      "SECURITY.md": {
+        "path": "SECURITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+        "size": 894,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+      },
+      "CONTRIBUTING.md": {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1decc4e58d9394ee688be67dc61d7e6453a873bb",
+        "size": 1483,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/1decc4e58d9394ee688be67dc61d7e6453a873bb"
+      },
+      ".github/workflows/ci.yml": {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+        "size": 279,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+      },
+      ".gitattributes": {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+        "size": 19,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+      },
+      ".gitignore": {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+        "size": 42,
+        "url": "https://api.github.com/repos/Elucenia/tool-correcao-de-sodio-adrogue-madias/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+      }
+    },
+    "sourceSpecificEvidence": {
+      "sourceSpecificStatus": "not-approved-by-this-consolidation",
+      "sourceSpecificEvidence": null,
+      "wholeInstrumentApproval": false,
+      "oldCandidateInstrumentRightsApproval": "not-performed"
+    },
+    "scope": "Historical Apache declaration and current MIT integration notices retained with exact sources; no relicensing or instrument approval inferred",
+    "reviewRequired": true,
+    "divergences": [
+      "Historical payload and current package declare different license labels; scope/authorship mapping must be reviewed before distribution"
+    ],
+    "wholeInstrumentApproval": false
+  },
+  "appWrites": false,
+  "externalMutations": false,
+  "publicationPerformed": false,
+  "externalPublicationReady": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

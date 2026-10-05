@@ -1,105 +1,228 @@
 [
   {
-    "label": "Mulher 60 kg, Na 110, NaCl 3%: +13,0/L; meta 8 → 615 mL",
-    "input": {
-      "na": 110,
-      "peso": 60,
-      "grupo": "0.5",
+    "id": "correcao-de-sodio-adrogue-madias",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Vetor sintético principal de referência",
+    "originalInput": {
+      "na": 120,
+      "peso": 70,
+      "grupo": "0.6",
       "sol": "ns3",
-      "meta": 8
+      "kadd": 0,
+      "idade": 50
     },
-    "expected": {
-      "raw": {
-        "delta": 13,
-        "vol": 0.6154,
-        "tbw": 30
-      },
-      "level": "info",
-      "main": "+13,0",
-      "tol": 0.01
-    },
-    "originalInput": {
-      "na": 110,
-      "peso": 60,
-      "grupo": "0.5",
-      "sol": "ns3",
-      "meta": 8
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Homem 70 kg, Na 160, soro glicosado 5%: −3,7/L; meta 10 → 2,69 L",
-    "input": {
-      "na": 160,
-      "peso": 70,
-      "grupo": "0.6",
-      "sol": "sg5",
-      "meta": 10
-    },
-    "expected": {
-      "raw": {
-        "delta": -3.721,
-        "vol": 2.6875
-      },
-      "level": "info",
-      "verdict": "reduzir",
-      "tol": 0.01
-    },
-    "originalInput": {
-      "na": 160,
-      "peso": 70,
-      "grupo": "0.6",
-      "sol": "sg5",
-      "meta": 10
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Homem 70 kg, Na 125, Ringer lactato: +0,21/L",
-    "input": {
-      "na": 125,
-      "peso": 70,
-      "grupo": "0.6",
-      "sol": "rl"
-    },
-    "expected": {
-      "raw": {
-        "delta": 0.2093
-      },
-      "level": "info",
-      "tol": 0.01
-    },
-    "originalInput": {
-      "na": 125,
-      "peso": 70,
-      "grupo": "0.6",
-      "sol": "rl"
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "NaCl 0,9% + 20 mEq/L de K, Na 120, 70 kg homem: +1,26/L",
     "input": {
       "na": 120,
       "peso": 70,
       "grupo": "0.6",
-      "sol": "ns09",
-      "kadd": 20
+      "sol": "ns3",
+      "kadd": 0,
+      "idade": 50
     },
+    "amendments": [],
     "expected": {
       "raw": {
-        "delta": 1.2558
+        "delta": 9.13953488372093,
+        "tbw": 42
       },
-      "level": "info",
-      "tol": 0.01
+      "main": "9,14",
+      "tol": 1e-9
     },
+    "recordedResult": {
+      "main": [
+        "9,14",
+        "mEq/L"
+      ],
+      "label": "Adrogué–Madias · ΔNa / 1 L",
+      "raw": {
+        "delta": 9.13953488372093,
+        "tbw": 42
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Salina0,9%; sem potássio adicional",
     "originalInput": {
       "na": 120,
       "peso": 70,
       "grupo": "0.6",
       "sol": "ns09",
-      "kadd": 20
+      "kadd": null,
+      "idade": 50
     },
-    "expandedZeroOptions": []
+    "input": {
+      "na": 120,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "ns09",
+      "kadd": null,
+      "idade": 50
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "delta": 0.7906976744186046,
+        "tbw": 42
+      },
+      "tol": 1e-9
+    },
+    "recordedResult": {
+      "main": [
+        "0,79",
+        "mEq/L"
+      ],
+      "label": "Adrogué–Madias · ΔNa / 1 L",
+      "raw": {
+        "delta": 0.7906976744186046,
+        "tbw": 42
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Ringer130+4; K adicional20",
+    "originalInput": {
+      "na": 134,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "rl",
+      "kadd": 20,
+      "idade": 50
+    },
+    "input": {
+      "na": 134,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "rl",
+      "kadd": 20,
+      "idade": 50
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "delta": 0.46511627906976744,
+        "tbw": 42
+      },
+      "tol": 1e-9
+    },
+    "recordedResult": {
+      "main": [
+        "0,47",
+        "mEq/L"
+      ],
+      "label": "Adrogué–Madias · ΔNa / 1 L",
+      "raw": {
+        "delta": 0.46511627906976744,
+        "tbw": 42
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Solução sem sódio; ΔNa negativo",
+    "originalInput": {
+      "na": 140,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "sg5",
+      "kadd": null,
+      "idade": 50
+    },
+    "input": {
+      "na": 140,
+      "peso": 70,
+      "grupo": "0.6",
+      "sol": "sg5",
+      "kadd": null,
+      "idade": 50
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "delta": -3.255813953488372,
+        "tbw": 42
+      },
+      "tol": 1e-9
+    },
+    "recordedResult": {
+      "main": [
+        "-3,26",
+        "mEq/L"
+      ],
+      "label": "Adrogué–Madias · ΔNa / 1 L",
+      "raw": {
+        "delta": -3.255813953488372,
+        "tbw": 42
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "correcao-de-sodio-adrogue-madias",
+    "kind": "native-source-reference",
+    "index": 4,
+    "name": "Fração0,45 escolhida explicitamente",
+    "originalInput": {
+      "na": 130,
+      "peso": 60,
+      "grupo": "0.45",
+      "sol": "ns045",
+      "kadd": 0,
+      "idade": 50
+    },
+    "input": {
+      "na": 130,
+      "peso": 60,
+      "grupo": "0.45",
+      "sol": "ns045",
+      "kadd": 0,
+      "idade": 50
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "delta": -1.8928571428571428,
+        "tbw": 27
+      },
+      "tol": 1e-9
+    },
+    "recordedResult": {
+      "main": [
+        "-1,89",
+        "mEq/L"
+      ],
+      "label": "Adrogué–Madias · ΔNa / 1 L",
+      "raw": {
+        "delta": -1.8928571428571428,
+        "tbw": 27
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
   }
 ]

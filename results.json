@@ -1,0 +1,634 @@
+{
+  "at": "2026-10-05T15:24:35.551Z",
+  "id": "correcao-de-sodio-adrogue-madias",
+  "engine": {
+    "file": "apps/website/private/tool-code/correcao-de-sodio-adrogue-madias/calculator.js",
+    "bytes": 525,
+    "sha256": "18dd63417647e64664dcf9cc745663f408a46c0fc84541e013b9d6b94e9c334a"
+  },
+  "sourceParity": "Node current source / per-tool browser VM outputs match",
+  "cases": [
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "input": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns3",
+        "kadd": 0,
+        "idade": 50
+      },
+      "expected": {
+        "raw": {
+          "delta": 9.13953488372093,
+          "tbw": 42
+        },
+        "main": "9,14",
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "9,14",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 9.13953488372093,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "9,14",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 9.13953488372093,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "9,14",
+          "obtained": "9,14",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.delta",
+          "expected": 9.13953488372093,
+          "obtained": 9.13953488372093,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.delta",
+          "expected": 9.13953488372093,
+          "obtained": 9.13953488372093,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "9,14",
+          "obtained": "9,14",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mEq/L",
+          "obtained": "mEq/L",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "index": 1,
+      "name": "Salina0,9%; sem potássio adicional",
+      "input": {
+        "na": 120,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "ns09",
+        "kadd": null,
+        "idade": 50
+      },
+      "expected": {
+        "raw": {
+          "delta": 0.7906976744186046,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "0,79",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.7906976744186046,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "0,79",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.7906976744186046,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.delta",
+          "expected": 0.7906976744186046,
+          "obtained": 0.7906976744186046,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.delta",
+          "expected": 0.7906976744186046,
+          "obtained": 0.7906976744186046,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,79",
+          "obtained": "0,79",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mEq/L",
+          "obtained": "mEq/L",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "index": 2,
+      "name": "Ringer130+4; K adicional20",
+      "input": {
+        "na": 134,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "rl",
+        "kadd": 20,
+        "idade": 50
+      },
+      "expected": {
+        "raw": {
+          "delta": 0.46511627906976744,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "0,47",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.46511627906976744,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "0,47",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": 0.46511627906976744,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.delta",
+          "expected": 0.46511627906976744,
+          "obtained": 0.46511627906976744,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.delta",
+          "expected": 0.46511627906976744,
+          "obtained": 0.46511627906976744,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,47",
+          "obtained": "0,47",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mEq/L",
+          "obtained": "mEq/L",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "index": 3,
+      "name": "Solução sem sódio; ΔNa negativo",
+      "input": {
+        "na": 140,
+        "peso": 70,
+        "grupo": "0.6",
+        "sol": "sg5",
+        "kadd": null,
+        "idade": 50
+      },
+      "expected": {
+        "raw": {
+          "delta": -3.255813953488372,
+          "tbw": 42
+        },
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "-3,26",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -3.255813953488372,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "-3,26",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -3.255813953488372,
+          "tbw": 42
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.delta",
+          "expected": -3.255813953488372,
+          "obtained": -3.255813953488372,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.delta",
+          "expected": -3.255813953488372,
+          "obtained": -3.255813953488372,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.tbw",
+          "expected": 42,
+          "obtained": 42,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "-3,26",
+          "obtained": "-3,26",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mEq/L",
+          "obtained": "mEq/L",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "correcao-de-sodio-adrogue-madias",
+      "index": 4,
+      "name": "Fração0,45 escolhida explicitamente",
+      "input": {
+        "na": 130,
+        "peso": 60,
+        "grupo": "0.45",
+        "sol": "ns045",
+        "kadd": 0,
+        "idade": 50
+      },
+      "expected": {
+        "raw": {
+          "delta": -1.8928571428571428,
+          "tbw": 27
+        },
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "-1,89",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -1.8928571428571428,
+          "tbw": 27
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "correcao-de-sodio-adrogue-madias",
+        "main": [
+          "-1,89",
+          "mEq/L"
+        ],
+        "label": "Adrogué–Madias · ΔNa / 1 L",
+        "raw": {
+          "delta": -1.8928571428571428,
+          "tbw": 27
+        },
+        "methodVersion": "Adrogué–Madias 2000; variação teórica por 1 L",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.delta",
+          "expected": -1.8928571428571428,
+          "obtained": -1.8928571428571428,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.tbw",
+          "expected": 27,
+          "obtained": 27,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.delta",
+          "expected": -1.8928571428571428,
+          "obtained": -1.8928571428571428,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.tbw",
+          "expected": 27,
+          "obtained": 27,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "-1,89",
+          "obtained": "-1,89",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mEq/L",
+          "obtained": "mEq/L",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "cases": 5,
+    "passed": 5,
+    "failed": 0,
+    "checks": 46
+  },
+  "newIndependentOracle": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}
